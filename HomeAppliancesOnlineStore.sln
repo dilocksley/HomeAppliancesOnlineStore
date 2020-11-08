@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HomeAppliancesOnlineStore.Database", "HomeAppliancesOnlineStore.Database\HomeAppliancesOnlineStore.Database.sqlproj", "{B0411310-70B6-4F9F-9B05-0390C804571A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAppliancesOnlineStore.Data", "HomeAppliancesOnlineStore.DAL\HomeAppliancesOnlineStore.Data.csproj", "{C495D143-78BA-49F0-B183-C5AE1CB6BD83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAppliancesOnlineStore.Business", "HomeAppliancesOnlineStore.Business\HomeAppliancesOnlineStore.Business.csproj", "{4E888EA1-69C5-4CBA-9BDE-6D29C45085FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAppliancesOnlineStore.API", "HomeAppliancesOnlineStore.API\HomeAppliancesOnlineStore.API.csproj", "{D28702F2-4056-4AE4-978F-C3672C7D8A14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAppliancesOnlineStore.Core", "HomeAppliancesOnlineStore.Core\HomeAppliancesOnlineStore.Core.csproj", "{A270E49D-9EC5-48EC-909B-22DDBE63934A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAppliancesOnlineStore.API.Tests", "HomeAppliancesOnlineStore.API.Tests\HomeAppliancesOnlineStore.API.Tests.csproj", "{05ED7EBB-2014-48E2-BFFE-114029617760}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0411310-70B6-4F9F-9B05-0390C804571A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C495D143-78BA-49F0-B183-C5AE1CB6BD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C495D143-78BA-49F0-B183-C5AE1CB6BD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C495D143-78BA-49F0-B183-C5AE1CB6BD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C495D143-78BA-49F0-B183-C5AE1CB6BD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E888EA1-69C5-4CBA-9BDE-6D29C45085FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E888EA1-69C5-4CBA-9BDE-6D29C45085FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E888EA1-69C5-4CBA-9BDE-6D29C45085FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E888EA1-69C5-4CBA-9BDE-6D29C45085FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28702F2-4056-4AE4-978F-C3672C7D8A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28702F2-4056-4AE4-978F-C3672C7D8A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28702F2-4056-4AE4-978F-C3672C7D8A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28702F2-4056-4AE4-978F-C3672C7D8A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A270E49D-9EC5-48EC-909B-22DDBE63934A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A270E49D-9EC5-48EC-909B-22DDBE63934A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A270E49D-9EC5-48EC-909B-22DDBE63934A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A270E49D-9EC5-48EC-909B-22DDBE63934A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ED7EBB-2014-48E2-BFFE-114029617760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ED7EBB-2014-48E2-BFFE-114029617760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ED7EBB-2014-48E2-BFFE-114029617760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ED7EBB-2014-48E2-BFFE-114029617760}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC77C430-2663-4901-B094-3D96DFCCF81E}
+	EndGlobalSection
+EndGlobal

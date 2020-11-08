@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeAppliancesOnlineStore.API</name>
+    </assembly>
+    <members>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.AddBuyer(HomeAppliancesOnlineStore.Business.Models.Input.BuyerInputModel)">
+            <summary>
+            Adds a new Buyer to the database.
+            </summary>
+            <param name="buyerInputModel">All the mandatory properties of the Buyer must be filled.</param>
+            <returns>A 64-bit positive integer, representing the Id of the newly added Buyer.</returns>
+            <response code="201">When the Buyer is successfully registered.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+            {
+                 "FirstName" : "Mark",
+                 "LastName" : "Bond",
+                 "ShippingAddress" : "Spb nevskky 44",
+                 "Phone" : "88125967484",
+                 "Password" : "bigBond",
+                 "Email" : "karlaB@mail.ru",
+                 "CityId" : 1
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.UpdateBuyerInfo(HomeAppliancesOnlineStore.Business.Models.Input.BuyerInputModel)">
+            <summary>
+            Updates an existing Buyer in the database.
+            </summary>
+            <param name="buyerInputModel">Any fields of the Buyer wished to be updated.</param>
+            <returns>A 64-bit positive integer, representing the Id of the updated Buyer.</returns>
+            <response code="200">When the Buyer information is successfully updated.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.DeleteBuyer(System.Int64)">
+            <summary>
+            Soft deletes the Buyer.
+            </summary>
+            <param name="buyerId">Buyer Id.</param>
+            <response code="200">When Buyer is deleted successfully.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.GetBuyer(System.Int64)">
+            <summary>
+            Gets all the info about a selected Buyer by its Id.
+            </summary>
+            <param name="buyerId">Buyer Id.</param>
+            <returns>Full information about the Buyer.</returns>
+            <response code="200">When the Buyer is found in the database.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.GetAllBuyers">
+            <summary>
+            Gets all the info about all the Buyers.
+            </summary>
+            <returns>Full information about all the Buyers.</returns>
+            <response code="200">When the search is completed successfully.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.BuyerController.GetBuyersCount">
+            <summary>
+            Gets a count of all of the Buyer accounts in the store.
+            </summary>
+            <returns>A number of total Buyers' count.</returns>
+            <response code="200">When the count is finished successfully.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.OrderController.UpdateOrder(HomeAppliancesOnlineStore.Business.Models.Input.OrderInputModel)">
+            <summary>
+            Creates a new Order.
+            </summary>
+            <param name="orderInputModel">All the mandatory properties in the Order must be filled.</param>
+            <returns>A 64-bit positive integer, representing the Id of the newly created Order.</returns>
+            <response code="201">When the Order is successfully created.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.OrderController.GetOrder(System.Int64)">
+            <summary>
+            Gets all the info about a selected Order by its Id.
+            </summary>
+            <param name="orderId">Order Id.</param>
+            <returns>Full information about the Order.</returns>
+            <response code="200">When the Order is found in the database.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.OrderController.GetOrdersByStatus(System.Int32)">
+            <summary>
+            Gets all the Orders by selected status.
+            </summary>
+            <param name="orderStatusId">Id of selected Order status.</param>
+            <returns>Full information about all the Orders with selected status.</returns>
+            <response code="200">When the search is completed successfully.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.AddProduct(HomeAppliancesOnlineStore.Business.Models.Input.ProductInputModel)">
+            <summary>
+            Adds a new Product to the database which isn't published.
+            </summary>
+            <param name="productInputModel">All the mandatory properties of the Product must be filled.</param>
+            <returns>A 64-bit positive integer, representing the Id of the newly added Product.</returns>
+            <response code="201">When the Product is successfully created.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="520">If problem occured.</response>
+            /// <example>
+            <code>
+            {
+                 "Name" : "Vacuum Cleaner Roboto 7700",
+                 "Price" : 15096,
+                 "Manufacturer" : "Philips",
+                 "ManufacturingYear": 2017,
+                 "Depth" : 10,
+                 "Width" : 15,
+                 "Height" : 20,
+                 "Weight" : 25,
+                 "Wattage" : 30,
+                 "Voltage" : 220,
+                 "RoomByRoomNavigation" : "Yes",
+                 "AppControlled" : "Yes",
+                 "ProtectiveBumpers" : "Six Protective bumpers"
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.UpdateProductInfo(HomeAppliancesOnlineStore.Business.Models.Input.ProductInputModel)">
+            <summary>
+            Updates an existing Product in the database.
+            </summary>
+            <param name="productInputModel">Any fields of the Product wished to be updated.</param>
+            <returns>A 64-bit positive integer, representing the Id of the updated Product.</returns>
+            <response code="200">When the Product information is successfully updated.</response>
+            <response code="404">If Product wasn't found.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+            {
+                 "Id" : 1,
+                 "Name" : "Fridge",
+                 "IsPublished" : false,
+                 "IceMaker" : "Yes"
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.DeleteProduct(System.Int64)">
+            <summary>
+            Soft deletes the existing product by making IsPublished field false.
+            Also deleted all the records about the Product in all the stores.
+            </summary>
+            <param name="id">An Id of the Product wished to be not published.</param>
+            <returns>ProductOutputModel including Product's Id, Name and IsPublished state.</returns>
+            <response code="200">When the Product publication status is successfully changed to not published.</response>
+            <response code="404">If Product wasn't found.</response>
+            <response code="422">If id wasn't validated.</response>
+            <response code="520">If problem occured.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.AddProductToStore(HomeAppliancesOnlineStore.Business.Models.Input.ProductInStoreInputModel)">
+            <summary>
+            Adds Product record to store. Makes the Product published.
+            </summary>
+            <param name="productInStoreInputModel">Contains id of the Product and corressponding store id with quantity amount.</param>
+            <returns>A 64-bit positive integer, representing the Id of the newly added record.</returns>
+            <response code="201">When the record is successfully created.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+            {
+                "ProductId" : 1,
+                "StoreId" : 2,
+                "Quantity" : 40
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.GetProductQuantityInStore(HomeAppliancesOnlineStore.Business.Models.Input.ProductInStoreInputModel)">
+            <summary>
+            Gets the Product quantity in certain store.
+            </summary>
+            <param name="productInStore">Includes Product Id and Store Id.</param>
+            <returns>A 32-bit positive integer, representing the amount of Prodcut in the store.</returns>
+            <response code="200">When the amount is recieved successfully.</response>
+            <response code="404">If no records were found.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+             {
+                "ProductId" : 1,
+                "StoreId" : 2
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.ChangeProductQuantityInStore(HomeAppliancesOnlineStore.Business.Models.Input.ProductInStoreInputModel)">
+            <summary>
+            Changes Product quantity amount in specific store.
+            </summary>
+            <param name="productInStoreInputModel">Contains id of the Product, store id and new quantity amount.</param>
+            <returns>A 32-bit positive integer, representing the number of affected records.</returns>
+            <response code="201">When the record has been successfully updated.</response>
+            <response code="404">If no records were found.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+            {
+                "ProductId" : 1,
+                "StoreId" : 2,
+                "Quantity" : 35
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.FindProducts(HomeAppliancesOnlineStore.Business.Models.Input.ProductSearchInputModel)">
+            <summary>
+            Finds product by selected сriteria.
+            </summary>
+            <param name="productInputModel">Any searching fields of the Product.</param>
+            <returns>A list of found Products with full information about it.</returns>
+            <response code="200">When the search is successful and list is composed.</response>
+            <response code="422">If input parameters weren't validated.</response>
+            <response code="404">If no product was found.</response>
+            <response code="520">If problem occured.</response>
+            <example>
+            <code>
+            {
+                 "name": "CoffeeMaker",
+                 "isPublished": true,
+                 "manufacturingYearEnd": 2019,
+                 "PublicationDateStart": "01.01.2000",
+                 "lastUpdateStart": "01.01.2020"
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.ProductController.GetListOfProductsOfCertainCategory(System.Int32)">
+            <summary>
+            Gets all the Products of a provided category defined by a set of сriteria.
+            </summary>
+            <param name="productCategory">Sougth category.</param>
+            <returns>A list of Products in the category.</returns>
+            <response code="200">When the Product Category is established correctly and the list is composed.</response>
+            <response code="422">If category parameter wasn't validated.</response>
+            <response code="404">If no products were found.</response>
+            <response code="520">If problem occured.</response>
+        </member>
+        <member name="M:HomeAppliancesOnlineStore.API.Controllers.StoreController.CheckStock(System.Int32,System.Int64)">
+            <summary>
+            Checks products availability in the store.
+            </summary>
+            <param name="storeId">Store Id.</param>
+            <param name="productId">Product Id.</param>
+            <returns>A 64-bit positive integer of a Product count in the Store.</returns>
+            <response code="201">When the count has been made.</response>
+        </member>
+    </members>
+</doc>
